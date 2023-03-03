@@ -16,8 +16,11 @@ def get_major_list():
 
 
 def main():
-    print('A program az "astronauts.csv" fájlból beolvasott asztronauták végzettségei közül kírja a 3 leggyakoribbat.')
+    print('A program az "astronauts.csv" fájlból beolvasott asztronauták végzettségei közül kírja a 3 leggyakoribbat.\n')
     major_list = get_major_list()
     print('Leggyakoribb végzettségek:')
     for major_tuple in collections.Counter(major_list).most_common(3):
         print(f'{major_tuple[0]}, {round(major_tuple[1] / len(major_list) * 100, 1)}%')
+
+
+main()
